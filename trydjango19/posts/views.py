@@ -9,7 +9,10 @@ def post_detail(request):
     return HttpResponse("<h1>Detail</h1>")
 
 def post_list(request):
-    return HttpResponse("<h1>List</h1>")
+    context = {
+        "title" : 'list'
+    }
+    return render(request, "index.html", context)
 
 def post_update(request):
     return HttpResponse("<h1>Update</h1>")
